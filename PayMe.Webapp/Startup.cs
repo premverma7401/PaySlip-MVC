@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PayMe.Persistence;
+using PayMe.Services;
+using PayMe.Services.Implimentation;
 
 namespace PayMe.Webapp
 {
@@ -32,6 +34,7 @@ namespace PayMe.Webapp
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
