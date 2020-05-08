@@ -39,7 +39,7 @@ namespace PayMe.Webapp.Controllers
         }
         [HttpGet]
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             var model = new EmployeeCreateViewModel();
             return View(model);
@@ -167,6 +167,62 @@ namespace PayMe.Webapp.Controllers
             }
             await _employee.UpdateAsync(employee);
 
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Detail(int id)
+        {
+            var employee = _employee.GetEmployeeById(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            EmployeeDetailViewModel model = new EmployeeDetailViewModel()
+            {
+                Id = employee.Id,
+                EmpId = employee.EmpId,
+                FullName = employee.FullName,
+                City = employee.City,
+                DateJoined = employee.DateJoined,
+                Designation = employee.Designation,
+                Gender = employee.Gender,
+                ImageUrl = employee.ImageUrl,
+                Address = employee.Address,
+                DOB = employee.DOB,
+                Email = employee.Email,
+                NSN = employee.NSN,
+                PaymentMethod = employee.PaymentMethod,
+                Phone  =employee.Phone,
+                PostCode = employee.PostCode,
+                StudentLoan =employee.StudentLoan,
+                UnionMember = employee.UnionMember
+
+            };
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var employee = _employee.Delete(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            var model = new EmployeeDeleteViewModel()
+            {
+                Id = employee.Id
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] // prevents cross site request forgery attack
+
+        public async Task<IActionResult> Delete(EmployeeDeleteViewModel model)
+        {
+            await _employee.Delete(model.Id);
             return RedirectToAction(nameof(Index));
         }
 
