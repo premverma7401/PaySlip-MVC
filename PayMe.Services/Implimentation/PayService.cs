@@ -15,7 +15,11 @@ namespace PayMe.Services.Implimentation
         private readonly ApplicationDbContext _context;
         private decimal contractualEarnings;
         private decimal overTimeHours;
-        private decimal overTimeHourRate = 1.5m;
+        private decimal overTimeRate;
+        private decimal overTimeHourRate;
+        private decimal overTimeEarnings;
+        private decimal netPay;
+        private decimal totalEarnings;
 
         public PayService(ApplicationDbContext context)
         {
@@ -38,7 +42,7 @@ namespace PayMe.Services.Implimentation
             await _context.PaymentRecords.AddAsync(paymentRecord);
             await _context.SaveChangesAsync();
         }
-        public IEnumerable<PaymentRecord> GetAll() => _context.PaymentRecords.OrderBy(p=>p.EmployeeId);
+        public IEnumerable<PaymentRecord> GetAll() => _context.PaymentRecords.OrderBy(p => p.EmployeeId);
         public IEnumerable<SelectListItem> GetAllTaxYears()
         {
             var allTaxYears = _context.TaxYears.Select(taxyears => new SelectListItem
@@ -49,19 +53,43 @@ namespace PayMe.Services.Implimentation
             return allTaxYears;
         }
         public PaymentRecord GetById(int id) => _context.PaymentRecords.Where(p => p.Id == id).FirstOrDefault();
-        public decimal NetPay(decimal totalEarnings, decimal totalDeductions)=> totalEarnings - totalDeductions;
-        public decimal OverTimeEarnings(decimal overTimeRate, decimal overTimeHours) => overTimeHours * overTimeRate;
+        public TaxYear GetTaxYearById(int id) => _context.TaxYears.Where(x => x.Id == id).FirstOrDefault();
+        public decimal NetPay(decimal totalEarnings, decimal totalDeductions)
+        {
+            netPay = totalEarnings - totalDeductions;
+            return netPay;
+        }
+        public decimal OverTimeEarnings(decimal overTimeRate, decimal overTimeHours)
+        {
+            overTimeEarnings = overTimeHours * overTimeRate;
+
+            return overTimeEarnings;
+        }
         public decimal OverTimeHours(decimal hoursWorked, decimal contractualHours)
         {
-            if (hoursWorked > contractualHours)
+           
+            if (hoursWorked <= contractualHours)
             {
-              overTimeHours =  hoursWorked - contractualHours;
+                overTimeHours = 0.00m;
+            }
+            else if (hoursWorked > contractualHours)
+            {
+                overTimeHours = hoursWorked - contractualHours;
             }
             return overTimeHours;
         }
-        public decimal OverTimeRate(decimal hourlyRate) => hourlyRate * overTimeHourRate;
-        public decimal TotalDeductions(decimal tax, decimal nic, decimal studentLoanRepayment, decimal unionFee) 
+        public decimal OverTimeRate(decimal hourlyRate)
+        {
+            overTimeRate = hourlyRate * 1.5m;
+            return overTimeRate;
+
+        }
+        public decimal TotalDeductions(decimal tax, decimal nic, decimal studentLoanRepayment, decimal unionFee)
             => tax + nic + studentLoanRepayment + unionFee;
-        public decimal TotalEarnings(decimal overTimeEarnings, decimal contractualEarnings) => overTimeEarnings + contractualEarnings;
+        public decimal TotalEarnings(decimal overTimeEarnings, decimal contractualEarnings)
+        {
+            totalEarnings = overTimeEarnings + contractualEarnings;
+            return totalEarnings;
+        }
     }
 }

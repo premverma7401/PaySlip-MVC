@@ -1,4 +1,5 @@
-﻿using PayMe.Entity;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using PayMe.Entity;
 using PayMe.Persistence;
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,16 @@ namespace PayMe.Services.Implimentation
                 unionFee = 100m;
             }
             return unionFee;
+        }
+
+        public IEnumerable<SelectListItem> EmployeeList()
+        {
+            var allEmployees = _context.Employees.Select(emp => new SelectListItem
+            {
+                Text = emp.FullName,
+                Value = emp.Id.ToString()
+            });
+            return allEmployees;
         }
     }
 }

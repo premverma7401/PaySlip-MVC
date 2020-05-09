@@ -1,4 +1,5 @@
-﻿using PayMe.Entity;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using PayMe.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +15,7 @@ namespace PayMe.Services
         Task UpdateAsync(Employee employee);
         Task Delete(int employeeId);
         IEnumerable<Employee> GetAll();
+        IEnumerable<SelectListItem> EmployeeList();
         decimal UnionFees(int employeeId);
         decimal StudentLoanRepay(int employeeId, decimal totalAmount);
 

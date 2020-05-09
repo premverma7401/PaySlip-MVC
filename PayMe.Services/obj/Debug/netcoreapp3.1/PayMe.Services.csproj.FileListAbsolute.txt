@@ -1,7 +1,3 @@
-C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.csprojAssemblyReference.cache
-C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.csproj.CoreCompileInputs.cache
-C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.AssemblyInfoInputs.cache
-C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.AssemblyInfo.cs
 C:\dev\PayMe\PayMeApp\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Services.deps.json
 C:\dev\PayMe\PayMeApp\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Services.dll
 C:\dev\PayMe\PayMeApp\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Services.pdb
@@ -9,6 +5,10 @@ C:\dev\PayMe\PayMeApp\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Entity.dll
 C:\dev\PayMe\PayMeApp\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Persistence.dll
 C:\dev\PayMe\PayMeApp\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Entity.pdb
 C:\dev\PayMe\PayMeApp\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Persistence.pdb
+C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.csprojAssemblyReference.cache
+C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.csproj.CoreCompileInputs.cache
+C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.AssemblyInfoInputs.cache
+C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.AssemblyInfo.cs
 C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.csproj.CopyComplete
 C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.dll
 C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.pdb

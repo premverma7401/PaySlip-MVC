@@ -13,6 +13,7 @@ namespace PayMe.Services
         PaymentRecord GetById(int id);
         IEnumerable<PaymentRecord> GetAll();
         IEnumerable<SelectListItem> GetAllTaxYears();
+        TaxYear GetTaxYearById(int id);
         decimal OverTimeHours(decimal hoursWorked, decimal contractualHours);
         decimal ContractualEarnings(decimal hoursWorked, decimal contractualHours, decimal hourlyRate);
         decimal OverTimeEarnings(decimal overTimeRate, decimal overTimeHours);

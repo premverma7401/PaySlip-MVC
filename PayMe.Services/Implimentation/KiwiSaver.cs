@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PayMe.Services.Implimentation
 {
-    public class IKiwiSaver : IKiwiSaverService
+    public class KiwiSaver : IKiwiSaverService
     {
 
         private decimal kiwiSaverRate = .04m;
