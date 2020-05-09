@@ -11,7 +11,7 @@ namespace PayMe.Webapp.Models
     public class EmployeeEditViewModel
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "Employee Number is required"), RegularExpression(@"^ [A-Z] {3,3}[0-9]{3}$")]
+        [Required(ErrorMessage = "Employee Number is required")]
         public string EmpId { get; set; }
         [Required(ErrorMessage = "First Name is required")]
         public string FirstName { get; set; }
@@ -26,7 +26,8 @@ namespace PayMe.Webapp.Models
         public IFormFile ImageUrl { get; set; }
         [DataType(DataType.Date), Display(Name = "Date Joined")]
 
-        public DateTime DateJoined { get; set; } 
+        public DateTime DateJoined { get; set; }
+        public string Phone { get; set; }
         public string Designation { get; set; }
         public string Email { get; set; }
         public string NSN { get; set; }

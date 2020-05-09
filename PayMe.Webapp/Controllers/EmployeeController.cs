@@ -113,6 +113,7 @@ namespace PayMe.Webapp.Controllers
                 City = employee.City,
                 Address = employee.Address,
                 Gender = employee.Gender,
+                Phone = employee.Phone,
                 Designation = employee.Designation,
                 MiddleName = employee.MiddleName,
                 NSN = employee.NSN,
@@ -145,6 +146,7 @@ namespace PayMe.Webapp.Controllers
             employee.DOB = model.DOB;
             employee.PaymentMethod = model.PaymentMethod;
             employee.StudentLoan = model.StudentLoan;
+            employee.Phone = model.Phone;
             employee.UnionMember = model.UnionMember;
             employee.City = model.City;
             employee.Address = model.Address;
@@ -192,7 +194,7 @@ namespace PayMe.Webapp.Controllers
                 Email = employee.Email,
                 NSN = employee.NSN,
                 PaymentMethod = employee.PaymentMethod,
-                Phone  =employee.Phone,
+                Phone  = employee.Phone,
                 PostCode = employee.PostCode,
                 StudentLoan =employee.StudentLoan,
                 UnionMember = employee.UnionMember
@@ -204,14 +206,15 @@ namespace PayMe.Webapp.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var employee = _employee.Delete(id);
+            var employee = _employee.GetEmployeeById(id);
             if (employee == null)
             {
                 return NotFound();
             }
             var model = new EmployeeDeleteViewModel()
             {
-                Id = employee.Id
+                Id = employee.Id,
+                FullName = employee.FullName
             };
 
             return View(model);

@@ -27,7 +27,7 @@ namespace PayMe.Webapp.Models
         public string Address { get; set; }
         public string City { get; set; }
         public int PostCode { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
         public UnionMember UnionMember { get; set; }
         public StudentLoan StudentLoan { get; set; }
