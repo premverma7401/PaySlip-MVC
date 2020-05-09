@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>aspnet-PayMe.Webapp-610CA01E-A505-46F1-AC8E-7A46758C90F1</UserSecretsId>
+    <AssemblyName>`</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

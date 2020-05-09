@@ -172,6 +172,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -195,7 +201,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Webapp\\PayMe.Webapp.csproj",
-        "projectName": "PayMe.Webapp",
+        "projectName": "`",
         "projectPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Webapp\\PayMe.Webapp.csproj",
         "packagesPath": "C:\\Users\\Prem\\.nuget\\packages\\",
         "outputPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Webapp\\obj\\",

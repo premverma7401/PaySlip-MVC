@@ -35,6 +35,7 @@ namespace PayMe.Webapp
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IPayService, PayService>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
