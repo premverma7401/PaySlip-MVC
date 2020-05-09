@@ -41,7 +41,7 @@ namespace PayMe.Entity
         public decimal Tax { get; set; }
         [Column(TypeName = "money")]
 
-        public decimal NIC { get; set; } // national insuranse contribution
+        public decimal? KiwiSaver { get; set; } // national insurance contribution
         [Column(TypeName = "money")]
 
         public decimal? UnionFee { get; set; } // optional as everyone is not a union member

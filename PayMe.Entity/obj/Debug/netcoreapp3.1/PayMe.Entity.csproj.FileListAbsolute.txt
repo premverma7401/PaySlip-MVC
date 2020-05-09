@@ -6,3 +6,4 @@ C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.Assembly
 C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.AssemblyInfo.cs
 C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.dll
 C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.pdb
+C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.csprojAssemblyReference.cache
