@@ -226,18 +226,6 @@ namespace PayMe.Persistence.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("DOB")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DateJoined")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Designation")
                         .HasColumnType("nvarchar(max)");
 
@@ -268,16 +256,50 @@ namespace PayMe.Persistence.Migrations
                     b.Property<string>("MiddleName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NSN")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PaymentMethod")
+                    b.Property<int?>("PayInfoEmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Phone")
+                    b.Property<int?>("PersonalInfoEmployeeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PayInfoEmployeeId");
+
+                    b.HasIndex("PersonalInfoEmployeeId");
+
+                    b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("PayMe.Entity.PayInfoEmployee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ContractType")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("ContractedHours")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("DateJoined")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("HourlyRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("IRD")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PostCode")
+                    b.Property<int>("KiwiSaver")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("OverTimeRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("PaymentMethod")
                         .HasColumnType("int");
 
                     b.Property<int>("StudentLoan")
@@ -288,7 +310,7 @@ namespace PayMe.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Employees");
+                    b.ToTable("PayInfoEmployees");
                 });
 
             modelBuilder.Entity("PayMe.Entity.PaymentRecord", b =>
@@ -367,6 +389,39 @@ namespace PayMe.Persistence.Migrations
                     b.ToTable("PaymentRecords");
                 });
 
+            modelBuilder.Entity("PayMe.Entity.PersonalInfoEmployee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DOB")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NSN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PostCode")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PersonalInfoEmployees");
+                });
+
             modelBuilder.Entity("PayMe.Entity.TaxYear", b =>
                 {
                     b.Property<int>("Id")
@@ -431,6 +486,17 @@ namespace PayMe.Persistence.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("PayMe.Entity.Employee", b =>
+                {
+                    b.HasOne("PayMe.Entity.PayInfoEmployee", "PayInfoEmployee")
+                        .WithMany()
+                        .HasForeignKey("PayInfoEmployeeId");
+
+                    b.HasOne("PayMe.Entity.PersonalInfoEmployee", "PersonalInfoEmployee")
+                        .WithMany()
+                        .HasForeignKey("PersonalInfoEmployeeId");
                 });
 
             modelBuilder.Entity("PayMe.Entity.PaymentRecord", b =>

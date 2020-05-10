@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using PayMe.Entity;
+using PayMe.Services.Implimentation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -39,15 +40,26 @@ namespace PayMe.Webapp.Models
         public string Phone { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
+        public decimal HourlyRate { get; set; }
+        public decimal OverTimeRate { get; set; }
+        public decimal ContractedHours { get; set; }
+        public string IRD { get; set; }
         public int PostCode { get; set; }
         [Display(Name = "Payment Method")]
         public PaymentMethod PaymentMethod { get; set; }
         [Display(Name = "Union Member")]
 
         public UnionMember UnionMember { get; set; }
+        [Display(Name = "Contract Type")]
+        public ContractType ContractType { get; set; }
         [Display(Name = "Student Loan")]
 
+
         public StudentLoan StudentLoan { get; set; }
-       
+        [Display(Name = "Kiwi Saver")]
+
+        public Entity.KiwiSaver KiwiSaver { get; set; }
+
+
     }
 }

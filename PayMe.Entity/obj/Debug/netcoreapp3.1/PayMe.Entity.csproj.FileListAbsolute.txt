@@ -1,9 +1,9 @@
 C:\dev\PayMe\PayMeApp\PayMe.Entity\bin\Debug\netcoreapp3.1\PayMe.Entity.deps.json
 C:\dev\PayMe\PayMeApp\PayMe.Entity\bin\Debug\netcoreapp3.1\PayMe.Entity.dll
 C:\dev\PayMe\PayMeApp\PayMe.Entity\bin\Debug\netcoreapp3.1\PayMe.Entity.pdb
-C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.csprojAssemblyReference.cache
 C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.csproj.CoreCompileInputs.cache
 C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.AssemblyInfoInputs.cache
 C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.AssemblyInfo.cs
 C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.dll
 C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.pdb
+C:\dev\PayMe\PayMeApp\PayMe.Entity\obj\Debug\netcoreapp3.1\PayMe.Entity.csprojAssemblyReference.cache

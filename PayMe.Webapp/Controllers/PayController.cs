@@ -85,7 +85,7 @@ namespace PayMe.Webapp.Controllers
                 TaxCode = model.TaxCode,
 
                 FullName = _employee.GetEmployeeById(model.EmployeeId).FullName,
-                Nino = _employee.GetEmployeeById(model.EmployeeId).NSN,
+                Nino = _employee.GetEmployeeById(model.EmployeeId).PersonalInfoEmployee.NSN,
 
                 OverTimeHours = overtimeHours = _pay.OverTimeHours(model.HoursWorked, model.ContractedHours),
                 ContractedEarnings = contractedEarnings = _pay.ContractualEarnings(model.HoursWorked, model.ContractedHours, model.HourlyRate),

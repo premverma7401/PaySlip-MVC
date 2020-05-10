@@ -2,6 +2,8 @@ C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\appsettings.Developme
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\appsettings.json
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\`.StaticWebAssets.xml
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\WkHtmlToPdf\wkhtmltoimage.exe
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\WkHtmlToPdf\wkhtmltopdf.exe
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\`.exe
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\`.deps.json
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\`.runtimeconfig.json
@@ -18,6 +20,7 @@ C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -61,6 +64,7 @@ C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudi
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\RotativaCore.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
@@ -136,6 +140,9 @@ C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\PayMe.Entity.pdb
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\PayMe.Services.pdb
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\PayMe.Persistence.pdb
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.csprojAssemblyReference.cache
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.csproj.CoreCompileInputs.cache
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\`.MvcApplicationPartsAssemblyInfo.cs
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\`.MvcApplicationPartsAssemblyInfo.cache
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.RazorAssemblyInfo.cache
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.RazorAssemblyInfo.cs
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.AssemblyInfoInputs.cache
@@ -154,6 +161,7 @@ C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Priv
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Pay\Create.cshtml.g.cs
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Pay\Detail.cshtml.g.cs
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Pay\Index.cshtml.g.cs
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Pay\Payslip.cshtml.g.cs
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -169,11 +177,5 @@ C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\staticwebassets\`.Sta
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\`.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\`.pdb
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.genruntimeconfig.cache
-C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Pay\Payslip.cshtml.g.cs
-C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
-C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\RotativaCore.dll
-C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.csproj.CoreCompileInputs.cache
-C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\`.MvcApplicationPartsAssemblyInfo.cs
-C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\`.MvcApplicationPartsAssemblyInfo.cache
-C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\WkHtmlToPdf\wkhtmltoimage.exe
-C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\WkHtmlToPdf\wkhtmltopdf.exe
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_basicEmpInfoPartial.cshtml.g.cs
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_payEmpInfoPartial.cshtml.g.cs

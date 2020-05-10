@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using PayMe.Entity;
 using PayMe.Persistence;
 using System;
@@ -30,8 +31,8 @@ namespace PayMe.Services.Implimentation
             _context.Remove(employee);
             await _context.SaveChangesAsync();
         }
-        public IEnumerable<Employee> GetAll() => _context.Employees;
-        public Employee GetEmployeeById(int employeeId) => _context.Employees.Where(x => x.Id == employeeId).FirstOrDefault();
+        public IEnumerable<Employee> GetAll() => _context.Employees.Include(emp=>emp.PersonalInfoEmployee).Include(emp=>emp.PayInfoEmployee);
+        public Employee GetEmployeeById(int employeeId) => _context.Employees.Include(emp=>emp.PayInfoEmployee).Include(emp=>emp.PersonalInfoEmployee).Where(x => x.Id == employeeId).FirstOrDefault();
         public async Task UpdateAsync(int employeeId)
         {
             var employee = GetEmployeeById(employeeId);
@@ -46,7 +47,7 @@ namespace PayMe.Services.Implimentation
         public decimal StudentLoanRepay(int employeeId, decimal totalAmount)
         {
             var employee = GetEmployeeById(employeeId);
-            if (employee.StudentLoan == StudentLoan.Yes)
+            if (employee.PayInfoEmployee.StudentLoan == StudentLoan.Yes)
             {
                 if (totalAmount > 2000 && totalAmount < 4000)
                 {
@@ -65,7 +66,7 @@ namespace PayMe.Services.Implimentation
         public decimal UnionFees(int employeeId)
         {
             var employee = GetEmployeeById(employeeId);
-            if (employee.UnionMember == UnionMember.Yes)
+            if (employee.PayInfoEmployee.UnionMember == UnionMember.Yes)
             {
                 unionFee = 100m;
             }

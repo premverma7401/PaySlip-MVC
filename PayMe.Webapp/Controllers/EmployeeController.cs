@@ -29,8 +29,8 @@ namespace PayMe.Webapp.Controllers
                 Id = employees.Id,
                 EmpNumber = employees.EmpId,
                 FullName = employees.FullName,
-                City = employees.City,
-                DateJoined = employees.DateJoined,
+                City = employees.PersonalInfoEmployee.City,
+                DateJoined = employees.PayInfoEmployee.DateJoined,
                 Designation = employees.Designation,
                 Gender = employees.Gender,
                 ImageUrl = employees.ImageUrl
@@ -54,24 +54,24 @@ namespace PayMe.Webapp.Controllers
             }
             var employee = new Employee
             {
-                Id = model.Id,
-                EmpId = model.EmpId,
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                FullName = model.FullName,
-                Email = model.Email,
-                DateJoined = model.DateJoined,
-                DOB = model.DOB,
-                PaymentMethod = model.PaymentMethod,
-                StudentLoan = model.StudentLoan,
-                UnionMember = model.UnionMember,
-                City = model.City,
-                Address = model.Address,
-                Gender = model.Gender,
-                Designation = model.Designation,
-                MiddleName = model.MiddleName,
-                NSN = model.NSN,
-                PostCode = model.PostCode
+               // Id = model.Id,
+               // EmpId = model.EmpId,
+               // FirstName = model.FirstName,
+               // LastName = model.LastName,
+               // FullName = model.FullName,
+               // Email = model.Email,
+               //DateJoined = model.DateJoined,
+               // DOB = model.DOB,
+               // PaymentMethod = model.PaymentMethod,
+               // StudentLoan = model.StudentLoan,
+               // UnionMember = model.UnionMember,
+               // City = model.City,
+               // Address = model.Address,
+               // Gender = model.Gender,
+               // Designation = model.Designation,
+               // MiddleName = model.MiddleName,
+               // NSN = model.NSN,
+               // PostCode = model.PostCode
 
             };
 
@@ -105,19 +105,19 @@ namespace PayMe.Webapp.Controllers
                 FirstName = employee.FirstName,
                 LastName = employee.LastName,
                 Email = employee.Email,
-                DateJoined = employee.DateJoined,
-                DOB = employee.DOB,
-                PaymentMethod = employee.PaymentMethod,
-                StudentLoan = employee.StudentLoan,
-                UnionMember = employee.UnionMember,
-                City = employee.City,
-                Address = employee.Address,
+                DateJoined = employee.PayInfoEmployee.DateJoined,
+                DOB = employee.PersonalInfoEmployee.DOB,
+                PaymentMethod = employee.PayInfoEmployee.PaymentMethod,
+                StudentLoan = employee.PayInfoEmployee.StudentLoan,
+                UnionMember = employee.PayInfoEmployee.UnionMember,
+                City = employee.PersonalInfoEmployee.City,
+                Address = employee.PersonalInfoEmployee.Address,
                 Gender = employee.Gender,
-                Phone = employee.Phone,
+                Phone = employee.PersonalInfoEmployee.Phone,
                 Designation = employee.Designation,
                 MiddleName = employee.MiddleName,
-                NSN = employee.NSN,
-                PostCode = employee.PostCode
+                NSN = employee.PersonalInfoEmployee.NSN,
+                PostCode = employee.PersonalInfoEmployee.PostCode
             };
 
             return View(model);
@@ -142,19 +142,19 @@ namespace PayMe.Webapp.Controllers
             employee.FirstName = model.FirstName;
             employee.LastName = model.LastName;
             employee.Email = model.Email;
-            employee.DateJoined = model.DateJoined;
-            employee.DOB = model.DOB;
-            employee.PaymentMethod = model.PaymentMethod;
-            employee.StudentLoan = model.StudentLoan;
-            employee.Phone = model.Phone;
-            employee.UnionMember = model.UnionMember;
-            employee.City = model.City;
-            employee.Address = model.Address;
+            employee.PayInfoEmployee.DateJoined = model.DateJoined;
+            employee.PersonalInfoEmployee.DOB = model.DOB;
+            employee.PayInfoEmployee.PaymentMethod = model.PaymentMethod;
+            employee.PayInfoEmployee.StudentLoan = model.StudentLoan;
+            employee.PersonalInfoEmployee.Phone = model.Phone;
+            employee.PayInfoEmployee.UnionMember = model.UnionMember;
+            employee.PersonalInfoEmployee.City = model.City;
+            employee.PersonalInfoEmployee.Address = model.Address;
             employee.Gender = model.Gender;
             employee.Designation = model.Designation;
             employee.MiddleName = model.MiddleName;
-            employee.NSN = model.NSN;
-            employee.PostCode = model.PostCode;
+            employee.PersonalInfoEmployee.NSN = model.NSN;
+            employee.PersonalInfoEmployee.PostCode = model.PostCode;
 
             if (model.ImageUrl != null && model.ImageUrl.Length > 0)
             {
@@ -184,20 +184,26 @@ namespace PayMe.Webapp.Controllers
                 Id = employee.Id,
                 EmpId = employee.EmpId,
                 FullName = employee.FullName,
-                City = employee.City,
-                DateJoined = employee.DateJoined,
+                City = employee.PersonalInfoEmployee.City,
+                DateJoined = employee.PayInfoEmployee.DateJoined,
                 Designation = employee.Designation,
                 Gender = employee.Gender,
                 ImageUrl = employee.ImageUrl,
-                Address = employee.Address,
-                DOB = employee.DOB,
+                Address = employee.PersonalInfoEmployee.Address,
+                DOB = employee.PersonalInfoEmployee.DOB,
                 Email = employee.Email,
-                NSN = employee.NSN,
-                PaymentMethod = employee.PaymentMethod,
-                Phone  = employee.Phone,
-                PostCode = employee.PostCode,
-                StudentLoan =employee.StudentLoan,
-                UnionMember = employee.UnionMember
+                NSN = employee.PersonalInfoEmployee.NSN,
+                PaymentMethod = employee.PayInfoEmployee.PaymentMethod,
+                Phone = employee.PersonalInfoEmployee.Phone,
+                ContractType = employee.PayInfoEmployee.ContractType,
+                ContractedHours = employee.PayInfoEmployee.ContractedHours,
+                HourlyRate = employee.PayInfoEmployee.HourlyRate,
+                OverTimeRate = employee.PayInfoEmployee.OverTimeRate,
+                IRD = employee.PayInfoEmployee.IRD,
+                KiwiSaver = employee.PayInfoEmployee.KiwiSaver,
+                PostCode = employee.PersonalInfoEmployee.PostCode,
+                StudentLoan =employee.PayInfoEmployee.StudentLoan,
+                UnionMember = employee.PayInfoEmployee.UnionMember
 
             };
             return View(model);
