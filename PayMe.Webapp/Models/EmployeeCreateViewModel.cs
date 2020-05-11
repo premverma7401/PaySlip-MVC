@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using PayMe.Entity;
+using PayMe.Services.Implimentation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -26,7 +27,7 @@ namespace PayMe.Webapp.Models
             }
         }
         [DataType(DataType.Date), Display(Name = "Date Of Birth")]
-        public DateTime DOB { get; set; } 
+        public DateTime DOB { get; set; }
         public string Gender { get; set; }
         [Display(Name = "Photo")]
         public IFormFile ImageUrl { get; set; }
@@ -37,9 +38,23 @@ namespace PayMe.Webapp.Models
         public string Email { get; set; }
         public string NSN { get; set; }
         public string Phone { get; set; }
+        [Display(Name = "Tax Code")]
+        public string TaxCode { get; set; } = "M";
+
         public string Address { get; set; }
         public string City { get; set; }
+        [Display(Name = "Post Code")]
         public int PostCode { get; set; }
+        [Display(Name = "Hourly Rate")]
+
+        public decimal HourlyRate { get; set; } = 18.90m;
+        [Display(Name = "Overtime Rate")]
+
+        public decimal OverTimeRate { get; set; } = 1.5m;
+        [Display(Name = "Contracted Hours")]
+
+        public decimal ContractedHours { get; set; }
+        public string IRD { get; set; }
         [Display(Name = "Payment Method")]
         public PaymentMethod PaymentMethod { get; set; }
         [Display(Name = "Union Member")]
@@ -47,7 +62,17 @@ namespace PayMe.Webapp.Models
         public UnionMember UnionMember { get; set; }
         [Display(Name = "Student Loan")]
 
+
         public StudentLoan StudentLoan { get; set; }
-       
+        [Display(Name = "Contract Type")]
+        public ContractType ContractType { get; set; }
+        [Display(Name = "Kiwi Saver")]
+
+        public KiwiSaver KiwiSaver { get; set; }
+        [Display(Name = "Pay Cycle")]
+
+        public PayCycle PayCycle { get; set; }
+
+
     }
 }

@@ -20,6 +20,7 @@ namespace PayMe.Services.Implimentation
         private decimal overTimeEarnings;
         private decimal netPay;
         private decimal totalEarnings;
+        private decimal overTimeBenefitRate = 1.5m;
 
         public PayService(ApplicationDbContext context)
         {
@@ -80,7 +81,7 @@ namespace PayMe.Services.Implimentation
         }
         public decimal OverTimeRate(decimal hourlyRate)
         {
-            overTimeRate = hourlyRate * 1.5m;
+            overTimeRate = hourlyRate * overTimeBenefitRate;
             return overTimeRate;
 
         }

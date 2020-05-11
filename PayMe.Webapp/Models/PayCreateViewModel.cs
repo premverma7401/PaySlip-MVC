@@ -21,13 +21,13 @@ namespace PayMe.Webapp.Models
         [Display(Name = "Tax Year")]
         public TaxYear TaxYear { get; set; }
         [Display(Name = "Tax Code")]
-        public string TaxCode { get; set; } = "M";
+        public string TaxCode { get; set; }
         [Display(Name = "Hourly Rate")]
         public decimal HourlyRate { get; set; }
         [Display(Name = "Hours Worked")]
         public decimal HoursWorked { get; set; }
         [Display(Name = "Contracted Hours")]
-        public decimal ContractedHours { get; set; } = 40;
+        public decimal ContractedHours { get; set; }
         [Display(Name = "OverTime Hours")]
         public decimal OverTimeHours { get; set; }
         [Display(Name = "Contracted Earnings")]

@@ -16,8 +16,7 @@ namespace PayMe.Services
         Task Delete(int employeeId);
         IEnumerable<Employee> GetAll();
         IEnumerable<SelectListItem> EmployeeList();
-        decimal UnionFees(int employeeId);
-        decimal StudentLoanRepay(int employeeId, decimal totalAmount);
+       
 
 
     }

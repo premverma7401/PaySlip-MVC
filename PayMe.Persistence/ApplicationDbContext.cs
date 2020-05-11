@@ -14,6 +14,8 @@ namespace PayMe.Persistence
         public DbSet<Employee> Employees { get; set; }
         public DbSet<PaymentRecord> PaymentRecords { get; set; }
         public DbSet<TaxYear> TaxYears { get; set; }
+        public DbSet<PersonalInfoEmployee> PersonalInfoEmployees { get; set; }
+        public DbSet<PayInfoEmployee> PayInfoEmployees { get; set; }
 
     }
 }

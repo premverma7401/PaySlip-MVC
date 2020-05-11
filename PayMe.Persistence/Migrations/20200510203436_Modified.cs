@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PayMe.Persistence.Migrations
 {
-    public partial class initial : Migration
+    public partial class Modified : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -47,33 +47,44 @@ namespace PayMe.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Employees",
+                name: "PayInfoEmployees",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    EmpId = table.Column<string>(nullable: false),
-                    FirstName = table.Column<string>(nullable: false),
-                    MiddleName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: false),
-                    FullName = table.Column<string>(nullable: true),
+                    ContractType = table.Column<int>(nullable: false),
+                    HourlyRate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    OverTimeRate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ContractedHours = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    IRD = table.Column<string>(nullable: true),
+                    DateJoined = table.Column<DateTime>(nullable: false),
+                    PaymentMethod = table.Column<int>(nullable: false),
+                    UnionMember = table.Column<int>(nullable: false),
+                    StudentLoan = table.Column<int>(nullable: false),
+                    KiwiSaver = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PayInfoEmployees", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PersonalInfoEmployees",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     DOB = table.Column<DateTime>(nullable: false),
                     Gender = table.Column<string>(nullable: true),
-                    ImageUrl = table.Column<string>(nullable: true),
-                    DateJoined = table.Column<DateTime>(nullable: false),
-                    Designation = table.Column<string>(nullable: true),
-                    Email = table.Column<string>(nullable: true),
                     NSN = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
                     City = table.Column<string>(nullable: true),
                     PostCode = table.Column<int>(nullable: false),
-                    PaymentMethod = table.Column<int>(nullable: false),
-                    UnionMember = table.Column<int>(nullable: false),
-                    StudentLoan = table.Column<int>(nullable: false)
+                    Phone = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Employees", x => x.Id);
+                    table.PrimaryKey("PK_PersonalInfoEmployees", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -196,6 +207,41 @@ namespace PayMe.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Employees",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EmpId = table.Column<string>(nullable: false),
+                    FirstName = table.Column<string>(nullable: false),
+                    MiddleName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: false),
+                    FullName = table.Column<string>(nullable: true),
+                    Gender = table.Column<string>(nullable: true),
+                    ImageUrl = table.Column<string>(nullable: true),
+                    Designation = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
+                    PersonalInfoEmployeeId = table.Column<int>(nullable: true),
+                    PayInfoEmployeeId = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Employees", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Employees_PayInfoEmployees_PayInfoEmployeeId",
+                        column: x => x.PayInfoEmployeeId,
+                        principalTable: "PayInfoEmployees",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Employees_PersonalInfoEmployees_PersonalInfoEmployeeId",
+                        column: x => x.PersonalInfoEmployeeId,
+                        principalTable: "PersonalInfoEmployees",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "PaymentRecords",
                 columns: table => new
                 {
@@ -216,7 +262,7 @@ namespace PayMe.Persistence.Migrations
                     OverTimeEarnings = table.Column<decimal>(type: "money", nullable: false),
                     TotalEarnings = table.Column<decimal>(type: "money", nullable: false),
                     Tax = table.Column<decimal>(type: "money", nullable: false),
-                    NIC = table.Column<decimal>(type: "money", nullable: false),
+                    KiwiSaver = table.Column<decimal>(type: "money", nullable: true),
                     UnionFee = table.Column<decimal>(type: "money", nullable: true),
                     StudentLoanRepay = table.Column<decimal>(type: "money", nullable: true),
                     TotalDeduction = table.Column<decimal>(type: "money", nullable: false),
@@ -279,6 +325,16 @@ namespace PayMe.Persistence.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Employees_PayInfoEmployeeId",
+                table: "Employees",
+                column: "PayInfoEmployeeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Employees_PersonalInfoEmployeeId",
+                table: "Employees",
+                column: "PersonalInfoEmployeeId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PaymentRecords_EmployeeId",
                 table: "PaymentRecords",
                 column: "EmployeeId");
@@ -320,6 +376,12 @@ namespace PayMe.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "TaxYears");
+
+            migrationBuilder.DropTable(
+                name: "PayInfoEmployees");
+
+            migrationBuilder.DropTable(
+                name: "PersonalInfoEmployees");
         }
     }
 }

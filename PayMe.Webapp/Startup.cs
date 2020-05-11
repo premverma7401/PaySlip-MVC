@@ -36,8 +36,8 @@ namespace PayMe.Webapp
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IPayService, PayService>();
-            services.AddScoped<ITaxService, TaxService>();
-            services.AddScoped<IKiwiSaverService, KiwiSaver>();
+            services.AddScoped<IDeductionService, DeductionService>();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
