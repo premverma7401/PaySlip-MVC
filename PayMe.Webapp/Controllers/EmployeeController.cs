@@ -54,27 +54,31 @@ namespace PayMe.Webapp.Controllers
             }
             var employee = new Employee
             {
-               // Id = model.Id,
-               // EmpId = model.EmpId,
-               // FirstName = model.FirstName,
-               // LastName = model.LastName,
-               // FullName = model.FullName,
-               // Email = model.Email,
-               //DateJoined = model.DateJoined,
-               // DOB = model.DOB,
-               // PaymentMethod = model.PaymentMethod,
-               // StudentLoan = model.StudentLoan,
-               // UnionMember = model.UnionMember,
-               // City = model.City,
-               // Address = model.Address,
-               // Gender = model.Gender,
-               // Designation = model.Designation,
-               // MiddleName = model.MiddleName,
-               // NSN = model.NSN,
-               // PostCode = model.PostCode
-
-            };
-
+                Id = model.Id,
+                EmpId = model.EmpId,
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                FullName = model.FullName,
+                Email = model.Email,
+                Gender = model.Gender,
+                Designation = model.Designation,
+                MiddleName = model.MiddleName,
+                PayInfoEmployee = new PayInfoEmployee
+                {
+                    DateJoined = model.DateJoined,
+                    PaymentMethod = model.PaymentMethod,
+                    StudentLoan = model.StudentLoan,
+                    UnionMember = model.UnionMember
+                },
+                PersonalInfoEmployee = new PersonalInfoEmployee
+                {
+                    DOB = model.DOB,
+                    NSN = model.NSN,
+                    PostCode = model.PostCode,
+                    City = model.City,
+                    Address = model.Address
+                }
+        };
             if (model.ImageUrl != null && model.ImageUrl.Length > 0)
             {
                 var uploadFol = @"images/employee";
@@ -87,6 +91,7 @@ namespace PayMe.Webapp.Controllers
                 employee.ImageUrl = "/" + uploadFol + "/" + fileName;
 
             }
+
             await _employee.CreateAsync(employee);
             return RedirectToAction(nameof(Index));
         }
@@ -202,7 +207,7 @@ namespace PayMe.Webapp.Controllers
                 IRD = employee.PayInfoEmployee.IRD,
                 KiwiSaver = employee.PayInfoEmployee.KiwiSaver,
                 PostCode = employee.PersonalInfoEmployee.PostCode,
-                StudentLoan =employee.PayInfoEmployee.StudentLoan,
+                StudentLoan = employee.PayInfoEmployee.StudentLoan,
                 UnionMember = employee.PayInfoEmployee.UnionMember
 
             };

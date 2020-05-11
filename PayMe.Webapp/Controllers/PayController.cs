@@ -57,6 +57,7 @@ namespace PayMe.Webapp.Controllers
         {
             ViewBag.employees = _employee.EmployeeList();
             ViewBag.taxYears = _pay.GetAllTaxYears();
+            
             var model = new PayCreateViewModel();
             return View(model);
         }

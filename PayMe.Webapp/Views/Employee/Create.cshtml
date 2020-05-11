@@ -165,7 +165,7 @@
                                     <label asp-for="ContractType"></label>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <select asp-for="ContractType" class="form-control"></select>
+                                    <select asp-for="ContractType" class="form-control" asp-items="Html.GetEnumSelectList<PayMe.Entity.ContractType>()"></select>
                                 </div>
 
                                 <div class="col-md-2"></div>
