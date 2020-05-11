@@ -21,7 +21,7 @@ namespace PayMe.Webapp.Models
         [Display(Name = "Tax Year")]
         public TaxYear TaxYear { get; set; }
         [Display(Name = "Tax Code")]
-        public string TaxCode { get; set; } = "M";
+        public string TaxCode { get; set; }
         [Display(Name = "Hourly Rate")]
         public decimal HourlyRate { get; set; }
         [Display(Name = "Hours Worked")]

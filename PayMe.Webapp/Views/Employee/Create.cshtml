@@ -75,7 +75,12 @@
                                     <input asp-for="Email" class="form-control" />
                                 </div>
                                 <div class="col-md-2"></div>
-
+                                <div class="form-group col-md-2">
+                                    <label asp-for="IRD"></label>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <input asp-for="IRD" class="form-control" />
+                                </div>
                             </div>
 
                             <div class="form-row">
@@ -173,7 +178,7 @@
                                     <label asp-for="ContractedHours"></label>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <input asp-for="ContractedHours" class="form-control"></input>
+                                    <input asp-for="ContractedHours" class="form-control" />
                                 </div>
 
                             </div>
@@ -184,7 +189,7 @@
                                     <label asp-for="HourlyRate"></label>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <input asp-for="HourlyRate" class="form-control"></input>
+                                    <input asp-for="HourlyRate" class="form-control" />
                                 </div>
 
                                 <div class="col-md-2"></div>
@@ -192,8 +197,29 @@
                                     <label asp-for="OverTimeRate"></label>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <input asp-for="OverTimeRate" class="form-control"></input>
+                                    <input asp-for="OverTimeRate" class="form-control" />
                                 </div>
+
+                            </div>
+                            <div class="form-row">
+
+                                <div class="form-group col-md-2">
+                                    <label asp-for="PayCycle"></label>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <select asp-for="PayCycle" id="PayMode" class="form-control" asp-items="Html.GetEnumSelectList<PayMe.Entity.PayCycle>()"></select>
+                                </div>
+
+                                <div class="col-md-2"></div>
+
+                               
+                                <div class="form-group col-md-2">
+                                    <label asp-for="TaxCode"></label>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <input asp-for="TaxCode" class="form-control" />
+                                </div>
+
 
                             </div>
                             <br /><br />

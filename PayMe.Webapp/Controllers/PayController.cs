@@ -14,8 +14,8 @@ namespace PayMe.Webapp.Controllers
     {
         private readonly IPayService _pay;
         private readonly IEmployeeService _employee;
-        private readonly ITaxService _tax;
-        private readonly IKiwiSaverService _kiwisaver;
+        private readonly IDeductionService _deduction;
+      
         private decimal overtimeHours;
         private decimal overtimeEarnings;
         private decimal contractedEarnings;
@@ -26,12 +26,11 @@ namespace PayMe.Webapp.Controllers
         private decimal taxCount;
         private decimal kiwiSave;
 
-        public PayController(IPayService pay, IEmployeeService employee, ITaxService tax, IKiwiSaverService kiwiSaver)
+        public PayController(IPayService pay, IEmployeeService employee, IDeductionService deduction)
         {
             _pay = pay;
             _employee = employee;
-            _tax = tax;
-            _kiwisaver = kiwiSaver;
+            _deduction = deduction;
         }
         public IActionResult Index()
         {
@@ -92,10 +91,10 @@ namespace PayMe.Webapp.Controllers
                 ContractedEarnings = contractedEarnings = _pay.ContractualEarnings(model.HoursWorked, model.ContractedHours, model.HourlyRate),
                 OverTimeEarnings = overtimeEarnings = _pay.OverTimeEarnings(_pay.OverTimeRate(model.HourlyRate), overtimeHours),
                 TotalEarnings = totalEarnings = _pay.TotalEarnings(overtimeEarnings, contractedEarnings),
-                StudentLoanRepay = studentLoanRepay = _employee.StudentLoanRepay(model.EmployeeId, totalEarnings),
-                UnionFee = unionFee = _employee.UnionFees(model.EmployeeId),
-                KiwiSaver = kiwiSave = _kiwisaver.KiwiSaverDeduction(totalEarnings),
-                Tax = taxCount = _tax.TaxAmount(totalEarnings),
+                StudentLoanRepay = studentLoanRepay = _deduction.StudentLoanRepay(model.EmployeeId, totalEarnings),
+                UnionFee = unionFee = _deduction.UnionFees(model.EmployeeId),
+                KiwiSaver = kiwiSave = _deduction.KiwiSaverDeduction(totalEarnings),
+                Tax = taxCount = _deduction.TaxAmount(totalEarnings),
                 TotalDeduction = totalDeduction = _pay.TotalDeductions(taxCount, kiwiSave, studentLoanRepay, unionFee),
                 NetPayment = _pay.NetPay(totalEarnings, totalDeduction)
                                

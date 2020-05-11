@@ -139,7 +139,6 @@ C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\PayMe.Services.dll
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\PayMe.Entity.pdb
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\PayMe.Services.pdb
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\bin\Debug\netcoreapp3.1\PayMe.Persistence.pdb
-C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.csprojAssemblyReference.cache
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.csproj.CoreCompileInputs.cache
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\`.MvcApplicationPartsAssemblyInfo.cs
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\`.MvcApplicationPartsAssemblyInfo.cache
@@ -179,3 +178,4 @@ C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\`.pdb
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.genruntimeconfig.cache
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_basicEmpInfoPartial.cshtml.g.cs
 C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_payEmpInfoPartial.cshtml.g.cs
+C:\dev\PayMe\PayMeApp\PayMe.Webapp\obj\Debug\netcoreapp3.1\PayMe.Webapp.csprojAssemblyReference.cache

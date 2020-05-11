@@ -13,9 +13,7 @@ namespace PayMe.Services.Implimentation
     public class EmployeeService : IEmployeeService
     {
         private readonly ApplicationDbContext _context;
-        private decimal studentLoanAmount = 0m;
-        private decimal unionFee = 0m;
-
+       
         public EmployeeService(ApplicationDbContext context)
         {
             _context = context;
@@ -44,34 +42,7 @@ namespace PayMe.Services.Implimentation
             _context.Update(employee);
             await _context.SaveChangesAsync();
         }
-        public decimal StudentLoanRepay(int employeeId, decimal totalAmount)
-        {
-            var employee = GetEmployeeById(employeeId);
-            if (employee.PayInfoEmployee.StudentLoan == StudentLoan.Yes)
-            {
-                if (totalAmount > 2000 && totalAmount < 4000)
-                {
-                    studentLoanAmount = 40m;
-                }
-                else if (totalAmount >= 4000 && totalAmount < 8000)
-                {
-                    studentLoanAmount = 100m;
-                }
-                return studentLoanAmount = 0;
-
-            }
-            return studentLoanAmount;
-
-        }
-        public decimal UnionFees(int employeeId)
-        {
-            var employee = GetEmployeeById(employeeId);
-            if (employee.PayInfoEmployee.UnionMember == UnionMember.Yes)
-            {
-                unionFee = 100m;
-            }
-            return unionFee;
-        }
+       
 
         public IEnumerable<SelectListItem> EmployeeList()
         {
