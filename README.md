@@ -3,8 +3,23 @@
 Payslip generator is a simple tool for Payroll team to generate payslips for there employees based on the invoice or timesheet they receive.
 The tool can be used independent with only requirement to create Employees with in the application.
 
+Technical Details:
+ASP.NET Core MVC multi-layered architecture. 
+Project Technology Stack & Tools used
+
+- C# Programming language
+- .NET Core 3.1 SDK
+- MVC
+- Entity Framework Core
+- LINQ
+- Visual Studio 2019
+- Bootstrap 4
+- SQL Server, Server Management Studio
+- GIT Version Control System (VCS), Version 2.22.0
+- RotativaCore (NuGet Library for PDF)
+
 Some features are:
-Simple Welcome Screen:
+Welcome Screen:
 ![image](https://user-images.githubusercontent.com/28286083/88003717-9cb72e80-cb59-11ea-9e40-4585d23f854e.png)
 
 	1. Create Employees for payroll system.
