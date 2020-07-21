@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ARSYqXbAmciKwXsl2qm4v/DtS5dstPUpYjbu2jyuLm7OFpdg613XZrKeqR1N9Ea++run+TG7M4CkI82FwnFYMQ==",
+  "dgSpecHash": "ziIV7JPd1bZ84/MW3IiF9mZ4KwDT53JiY2hbDq0gNk8Gu3lWgCvX5RkUNqNPgh4fpVOAyTxYfN4tH28eB/9Rxw==",
   "success": true,
-  "projectFilePath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Services\\PayMe.Services.csproj",
+  "projectFilePath": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Services\\PayMe.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Prem\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\Prem\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

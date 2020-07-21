@@ -8190,11 +8190,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Services\\PayMe.Services.csproj",
+      "projectUniqueName": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Services\\PayMe.Services.csproj",
       "projectName": "PayMe.Services",
-      "projectPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Services\\PayMe.Services.csproj",
+      "projectPath": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Services\\PayMe.Services.csproj",
       "packagesPath": "C:\\Users\\Prem\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Services\\obj\\",
+      "outputPath": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Prem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8210,11 +8210,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\dev\\PayMe\\PayMeApp\\PayMe.Entity\\PayMe.Entity.csproj": {
-              "projectPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Entity\\PayMe.Entity.csproj"
+            "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Entity\\PayMe.Entity.csproj": {
+              "projectPath": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Entity\\PayMe.Entity.csproj"
             },
-            "C:\\dev\\PayMe\\PayMeApp\\PayMe.Persistence\\PayMe.Persistence.csproj": {
-              "projectPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Persistence\\PayMe.Persistence.csproj"
+            "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Persistence\\PayMe.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Persistence\\PayMe.Persistence.csproj"
             }
           }
         }
@@ -8248,7 +8248,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

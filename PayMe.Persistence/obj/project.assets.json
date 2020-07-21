@@ -5162,11 +5162,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Persistence\\PayMe.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Persistence\\PayMe.Persistence.csproj",
       "projectName": "PayMe.Persistence",
-      "projectPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Persistence\\PayMe.Persistence.csproj",
+      "projectPath": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Persistence\\PayMe.Persistence.csproj",
       "packagesPath": "C:\\Users\\Prem\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Persistence\\obj\\",
+      "outputPath": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Prem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5182,8 +5182,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\dev\\PayMe\\PayMeApp\\PayMe.Entity\\PayMe.Entity.csproj": {
-              "projectPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Entity\\PayMe.Entity.csproj"
+            "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Entity\\PayMe.Entity.csproj": {
+              "projectPath": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Entity\\PayMe.Entity.csproj"
             }
           }
         }
@@ -5231,7 +5231,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

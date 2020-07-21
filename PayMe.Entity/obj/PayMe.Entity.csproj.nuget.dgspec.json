@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\PayMe\\PayMeApp\\PayMe.Entity\\PayMe.Entity.csproj": {}
+    "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Entity\\PayMe.Entity.csproj": {}
   },
   "projects": {
-    "C:\\dev\\PayMe\\PayMeApp\\PayMe.Entity\\PayMe.Entity.csproj": {
+    "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Entity\\PayMe.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Entity\\PayMe.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Entity\\PayMe.Entity.csproj",
         "projectName": "PayMe.Entity",
-        "projectPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Entity\\PayMe.Entity.csproj",
+        "projectPath": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Entity\\PayMe.Entity.csproj",
         "packagesPath": "C:\\Users\\Prem\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\PayMe\\PayMeApp\\PayMe.Entity\\obj\\",
+        "outputPath": "C:\\Users\\Prem\\Source\\Repos\\PaySlip-MVC\\PayMe.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Prem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

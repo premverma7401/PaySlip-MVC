@@ -12,3 +12,17 @@ C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.Asse
 C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.csproj.CopyComplete
 C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.dll
 C:\dev\PayMe\PayMeApp\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.pdb
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Services.deps.json
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Services.dll
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Services.pdb
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Entity.dll
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Persistence.dll
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Entity.pdb
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\bin\Debug\netcoreapp3.1\PayMe.Persistence.pdb
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.csprojAssemblyReference.cache
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.AssemblyInfoInputs.cache
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.AssemblyInfo.cs
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.csproj.CoreCompileInputs.cache
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.csproj.CopyComplete
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.dll
+C:\Users\Prem\Source\Repos\PaySlip-MVC\PayMe.Services\obj\Debug\netcoreapp3.1\PayMe.Services.pdb
